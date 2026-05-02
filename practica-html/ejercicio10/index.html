@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <br>
+        <input type="text" id="nombre" maxlength="30">
+
+        <br>
+
+        <label for="apellidos">Apellidos</label>
+        <br>
+        <input type="text" id="apellidos" size="50" maxlength="80">
+
+        <br>
+
+        <label for="contrasenia">Contraseña</label>
+        <br>
+        <input type="password" id="contrasenia" maxlength="10">
+
+        <br>
+
+        <label for="dni" size="10">DNI</label>
+        <br>
+        <input type="number" id="dni">
+
+        <br>
+
+        <label for="sexo">Sexo</label>
+        <input type="radio" name="sexo" value="hombre" checked="checked">Hombre
+        <input type="radio" name="sexo" value="mujer">Mujer
+
+        <br>
+        <br>
+
+        <label for="foto">Incluir mi foto</label>
+        <input type="file">
+
+        <br>
+        <br>
+
+        <input type="checkbox" checked="checked">
+        <label for="suscripcion">Suscribirme al boletín de novedades</label>
+
+        <br>
+        <br>
+
+        <input type="submit" value="Guardar cambios">
+        <input type="reset" value="Borrar los datos introducidos">
+    </form>
+
+    <br>
+
+    <h3>Rellena tu CV</h3>
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="provincia">Provincia</label>
+            <select id="provincia">
+                <option selected="selected">- selecciona -</option>
+                <option>Buenos Aires</option>
+                <option>Córdoba</option>
+                <option>Mendoza</option>
+                <option>Tierra del Fuego</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="fechaNac">Fecha de nacimiento</label>
+            <br>
+            <input type="text" size="2" maxlength="2"> de
+            <select id="mes">
+                <option selected="selected">Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Mayo</option>
+                <option>Junio</option>
+                <option>Julio</option>
+                <option>Agosto</option>
+                <option>Septiembre</option>
+                <option>Octubre</option>
+                <option>Noviembre</option>
+                <option>Diciembre</option>
+            </select> de
+            <input type="text" size="4" maxlength="4">
+
+            <br>
+            <br>
+
+            <label for="tema">Temas de interés</label>
+
+            <br>
+            
+            <select multiple="multiple" size="5">
+                <option>Administración de bases de datos</option>
+                <option>Análisis y programación</option>
+                <option>Arquitectura</option>
+                <option>Calidad</option>
+                <option>ERP, CRM, Business Intelligence</option>
+            </select>
+
+        </fieldset>
+    </form>
+</body>
+</html>
