@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 14 - DOM b􀀀sico y atributos XHTML</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- importación de librería jquery -->
+<script type="text/javascript">
+// esperamos a que la página cargue para ejecutar el código
+    $(document).ready(function(){
+        $('.enlace').on('click', function(e){ //selecciona todos los elementos de clase enlace de la pág y les agrega evento click
+            const elemento = $('#contenidos_' + $(this).attr('data-contenido')); // this -> enlace clickeado, el attr identifica cuál de los 3 enlaces es
+            if ($(this).hasClass('oculto')){ //si el enlace tiene clase oculto
+                $(this).removeClass('oculto'); //se borra la clase oculto
+                $(this).html('Ocultar contenidos'); //se cambia el mensaje del enlace
+                elemento.show(); //se muestra el parrafo
+            } 
+            
+            else{ //si el enlace no está oculto
+                $(this).addClass('oculto'); //se le asigna clase oculto
+                $(this).html('Mostrar contenidos'); //se cambia el nombre del enlace
+                elemento.hide(); //se oculta el parrafo
+            } 
+        }); 
+    });
+</script>
+</head>
+<body>
+<p id="contenidos_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. 
+    Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et,
+    luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum
+    elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu 
+    adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit. Duis scelerisque.</p>
+<a class="enlace" data-contenido="1" href="#">Ocultar contenidos</a> 
+<p id="contenidos_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. 
+    Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, 
+    luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum 
+    elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu 
+    adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer 
+    adipiscing elit. Duis scelerisque.</p>
+<a class="enlace" data-contenido="2" href="#">Ocultar contenidos</a>
+<br/>
+<p id="contenidos_3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. 
+    Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, 
+    luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum 
+    elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu 
+    adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer 
+    adipiscing elit. Duis scelerisque.</p>
+<a class="enlace" data-contenido="3" href="#">Ocultar contenidos</a>
+</body>
+</html>
